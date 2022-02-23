@@ -1,0 +1,29 @@
+@import '_typography';
+@import '_mixins';
+@import '_variables';
+@import '_media-queries';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	body {
+		font-family: 'Tajawal', arial, sans-serif;
+		margin: 0 auto;
+		position: relative;
+		@include nav-collapse {
+			width: 100%;
+		}
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+		.container {
+			margin-top: 0;
+			@include nav-collapse {
+				margin-top: 4rem;
+			}
+		}
+	}
+}
