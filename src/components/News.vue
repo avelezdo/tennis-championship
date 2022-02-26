@@ -37,7 +37,7 @@
 		grid-template-rows: repeat(5, 1fr);
 		grid-column-gap: 2rem;
 		grid-row-gap: 0px;
-		background-color: #02170e;
+		background-color: $grey__dark;
 		.news__title {
 			font-family: 'LeagueGothic';
 			font-size: 3rem;
