@@ -2,15 +2,17 @@
 
 <template>
 	<header>
-		<img src="../assets/Campeonato tenis Tomares 4.png" alt="" />
+		<picture>
+			<source media="(min-width:650px)" srcset="../assets/Campeonato tenis Tomares 4.png" />
+			<source media="(min-width:465px)" srcset="../assets/Campeonato tenis Tomares 4.png" />
+			<img src="../assets/Campeonato tenis Tomares 4.png" alt="Campeonato tenis" />
+		</picture>
 	</header>
 </template>
 
 <style scoped>
-	a {
-		color: #42b983;
-	}
 	header img {
 		width: 100%;
+		display: block;
 	}
 </style>
