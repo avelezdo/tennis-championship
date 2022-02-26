@@ -66,7 +66,7 @@
 		}
 	}
 
-	.news__wrapper {
+	.news-1 {
 		grid-area: 2 / 2 / 5 / 3;
 	}
 	.news-2 {
