@@ -36,10 +36,10 @@
 		</div>
 		<div class="mobile-nav__container">
 			<ul class="nav__ul">
-				<li class="nav__link" data-name="players">Jugadores</li>
 				<li class="nav__link" data-name="news">Noticias</li>
-				<li class="nav__link" data-name="sponsors">Patrocinadores</li>
+				<li class="nav__link" data-name="players">Jugadores</li>
 				<li class="nav__link" data-name="contact">Contacto</li>
+				<li class="nav__link" data-name="sponsors">Patrocinadores</li>
 			</ul>
 		</div>
 		<div id="burger">
