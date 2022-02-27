@@ -4,7 +4,9 @@ export default function () {
 		playersDestination = document.querySelector('.players'),
 		sponsorsDestination = document.querySelector('.sponsors'),
 		contactDestination = document.querySelector('.contact'),
-		navLink = document.querySelectorAll('.nav__link');
+		navLink = document.querySelectorAll('.nav__link'),
+		backToTopDestination = document.querySelector('body'),
+		backToTopLink = document.querySelector('.back-to-top');
 
 	navLink.forEach((target) => {
 		target.addEventListener('click', () => {
@@ -28,6 +30,10 @@ export default function () {
 					break;
 			}
 		});
+	});
+
+	backToTopLink.addEventListener('click', () => {
+		scroll(backToTopDestination);
 	});
 }
 
