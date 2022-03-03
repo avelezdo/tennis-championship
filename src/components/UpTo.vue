@@ -30,7 +30,7 @@
 		width: 42px;
 		height: 42px;
 		border-radius: 30px;
-		background: $yellow url('../assets/up-arrow.png') no-repeat center 47%;
+		background: $yellow url('../assets/images/up-arrow.png') no-repeat center 47%;
 		background-size: 18px 18px;
 		text-indent: -9999px;
 		cursor: pointer;

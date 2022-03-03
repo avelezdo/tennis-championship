@@ -5,30 +5,30 @@
 		<h1 class="players__title">Jugadores</h1>
 		<div class="player-1 players__wrapper">
 			<picture>
-				<source media="(min-width:650px)" srcset="../assets/Guillermo_Garcia-Lopez.jpg" />
-				<source media="(min-width:465px)" srcset="../assets/Guillermo_Garcia-Lopez.jpg" />
-				<img src="../assets/Guillermo_Garcia-Lopez.jpg" alt="Guillermo García-López" />
+				<source media="(min-width:650px)" srcset="../assets/images/players/Guillermo_Garcia-Lopez.jpg" />
+				<source media="(min-width:465px)" srcset="../assets/images/players/Guillermo_Garcia-Lopez.jpg" />
+				<img src="../assets/images/players/Guillermo_Garcia-Lopez.jpg" alt="Guillermo García-López" />
 			</picture>
 		</div>
 		<div class="player-2 players__wrapper">
 			<picture>
-				<source media="(min-width:650px)" srcset="../assets/ruben-ramirez-hidalgo.jpg" />
-				<source media="(min-width:465px)" srcset="../assets/ruben-ramirez-hidalgo.jpg" />
-				<img src="../assets/ruben-ramirez-hidalgo.jpg" alt="Rubén Ramírez Hidalgo" />
+				<source media="(min-width:650px)" srcset="../assets/images/players/ruben-ramirez-hidalgo.jpg" />
+				<source media="(min-width:465px)" srcset="../assets/images/players/ruben-ramirez-hidalgo.jpg" />
+				<img src="../assets/images/players/ruben-ramirez-hidalgo.jpg" alt="Rubén Ramírez Hidalgo" />
 			</picture>
 		</div>
 		<div class="player-3 players__wrapper">
 			<picture>
-				<source media="(min-width:650px)" srcset="../assets/Tommy-Robredo.jpg" />
-				<source media="(min-width:465px)" srcset="../assets/Tommy-Robredo.jpg" />
-				<img src="../assets/Tommy-Robredo.jpg" alt="Tommy Robredo" />
+				<source media="(min-width:650px)" srcset="../assets/images/players/Tommy-Robredo.jpg" />
+				<source media="(min-width:465px)" srcset="../assets/images/players/Tommy-Robredo.jpg" />
+				<img src="../assets/images/players/Tommy-Robredo.jpg" alt="Tommy Robredo" />
 			</picture>
 		</div>
 		<div class="player-4 players__wrapper">
 			<picture>
-				<source media="(min-width:650px)" srcset="../assets/dani-rincon.jpg" />
-				<source media="(min-width:465px)" srcset="../assets/dani-rincon.jpg" />
-				<img src="../assets/dani-rincon.jpg" alt="Dani Rincón" />
+				<source media="(min-width:650px)" srcset="../assets/images/players/dani-rincon.jpg" />
+				<source media="(min-width:465px)" srcset="../assets/images/players/dani-rincon.jpg" />
+				<img src="../assets/images/players/dani-rincon.jpg" alt="Dani Rincón" />
 			</picture>
 		</div>
 	</section>

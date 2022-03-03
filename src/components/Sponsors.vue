@@ -6,16 +6,16 @@
 		<div class="parent">
 			<div class="div1">
 				<picture>
-					<source media="(min-width:650px)" srcset="../assets/casino-Tomares.jpg" />
-					<source media="(min-width:465px)" srcset="../assets/casino-Tomares.jpg" />
-					<img src="../assets/casino-Tomares.jpg" alt="Campeonato tenis" />
+					<source media="(min-width:650px)" srcset="../assets/images/sponsors/casino-Tomares.jpg" />
+					<source media="(min-width:465px)" srcset="../assets/images/sponsors/casino-Tomares.jpg" />
+					<img src="../assets/images/sponsors/casino-Tomares.jpg" alt="Campeonato tenis" />
 				</picture>
 			</div>
 			<div class="div2">
 				<picture>
-					<source media="(min-width:650px)" srcset="../assets/ayuntamiento-Tomares.png" />
-					<source media="(min-width:465px)" srcset="../assets/ayuntamiento-Tomares.png" />
-					<img src="../assets/ayuntamiento-Tomares.png" alt="Campeonato tenis" />
+					<source media="(min-width:650px)" srcset="../assets/images/sponsors/ayuntamiento-Tomares.png" />
+					<source media="(min-width:465px)" srcset="../assets/images/sponsors/ayuntamiento-Tomares.png" />
+					<img src="../assets/images/sponsors/ayuntamiento-Tomares.png" alt="Campeonato tenis" />
 				</picture>
 			</div>
 		</div>
