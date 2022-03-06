@@ -58,11 +58,19 @@
 			width: 100%;
 			display: block;
 		}
+		@include mobile {
+			grid-area: 1 / 1 / 1 / 6;
+			height: auto;
+		}
 	}
 	.div2 {
 		grid-area: 1 / 4 / 1 / 6;
 		img {
 			width: 100%;
+		}
+		@include mobile {
+			grid-area: 2 / 1 / 2 / 6;
+			height: auto;
 		}
 	}
 </style>
