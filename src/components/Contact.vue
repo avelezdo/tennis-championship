@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+	import VLazyImage from 'v-lazy-image';
+</script>
 
 <template>
 	<section class="contact">
@@ -19,7 +21,7 @@
 					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAbFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0Iv+qAAAAI3RSTlMA+Se3IYBwEgTZsDYMy7NsQxfqZFJOMAr05uDQk4t1SUDrq7k2DUAAAADbSURBVCjPfZDnksIwDITlFpc00gj9uNP7v+NZsgFnYNg/lvezpB3Dd82aD93PduMbPDs674hC1S+/QkTDla3NES8u+zsRgZD5tl5RJWJHJIVY7sNtAJjwkgclyQg8HiaAK/KeJfmj5lwKJ1iPiupGkH/KO5w6DGAEp+4IVJAl8QY1LpyKQAsP+T+w2HOpiPw8QL2Pb3Xqpi2+gXdx4s59IB0T7tGyBE1LxMc98hdDiQaPnK060b8ZV5AWC511MS2UZN5kE0/fwEZSJVv0b7HvIXaNO/igdektfNU/Ky4Wk4FhsTAAAAAASUVORK5CYII="
 					alt=""
 				/>
-				954159210
+				954 15 92 10
 			</div>
 			<div class="contact__media">
 				<img
@@ -36,11 +38,23 @@
 				/>
 			</div>
 		</div>
-		<picture>
+		<div class="contact__map">
+			<v-lazy-image
+				class="picture-demo2"
+				srcset="
+            /src/assets/images/map.jpg 2200w,
+            /src/assets/images/map.jpg 1000w,
+            /src/assets/images/map.jpg 800w
+          "
+				sizes="100%, 100%, 100%"
+				src="/src/assets/images/map.jpg"
+			/>
+		</div>
+		<!-- <picture>
 			<source media="(min-width:650px)" srcset="../assets/images/map.jpg" />
 			<source media="(min-width:465px)" srcset="../assets/images/map.jpg" />
 			<img src="../assets/images/map.jpg" alt="mapa" />
-		</picture>
+		</picture> -->
 		<!-- <div class="contact__wrapper"></div> -->
 	</section>
 </template>
@@ -48,6 +62,10 @@
 <style lang="scss" scoped>
 	.contact {
 		display: flex;
+		font-size: 1.75rem;
+		@include mobile {
+			flex-direction: column;
+		}
 		.contact__wrapper {
 			// width: 100%;
 		}
@@ -57,7 +75,28 @@
 			gap: 1rem;
 			justify-content: center;
 			align-items: center;
-			width: 35%;
+			width: 35vw;
+			@include nav-collapse {
+				font-size: 1.25rem;
+				// height: auto;
+			}
+			@include tablet {
+				font-size: 0.75rem;
+				// height: auto;
+			}
+			@include mobile {
+				font-size: 1.25rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				width: 100vw;
+			}
+		}
+		.contact__map {
+			width: 65vw;
+			@include mobile {
+				width: 100vw;
+				// height: auto;
+			}
 		}
 		img {
 			width: 100%;
