@@ -67,11 +67,9 @@
 			width: 35vw;
 			@include nav-collapse {
 				font-size: 1.25rem;
-				// height: auto;
 			}
 			@include tablet {
 				font-size: 0.75rem;
-				// height: auto;
 			}
 			@include mobile {
 				font-size: 1.25rem;
@@ -93,6 +91,9 @@
 		.icon {
 			width: 24px;
 			display: inline;
+			@include tablet {
+				width: 16px;
+			}
 		}
 		.contact__media {
 			display: flex;
@@ -100,6 +101,9 @@
 		}
 		.contact__media img {
 			width: 32px;
+			@include tablet {
+				width: 24px;
+			}
 		}
 	}
 </style>
