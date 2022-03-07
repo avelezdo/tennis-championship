@@ -4,7 +4,6 @@
 
 <template>
 	<section class="contact">
-		<!-- <h1 class="contact__title">Contacto</h1> -->
 		<div class="contact__details">
 			<div>
 				<img
@@ -40,7 +39,6 @@
 		</div>
 		<div class="contact__map">
 			<v-lazy-image
-				class="picture-demo2"
 				srcset="
             /src/assets/images/map.jpg 2200w,
             /src/assets/images/map.jpg 1000w,
@@ -50,12 +48,6 @@
 				src="/src/assets/images/map.jpg"
 			/>
 		</div>
-		<!-- <picture>
-			<source media="(min-width:650px)" srcset="../assets/images/map.jpg" />
-			<source media="(min-width:465px)" srcset="../assets/images/map.jpg" />
-			<img src="../assets/images/map.jpg" alt="mapa" />
-		</picture> -->
-		<!-- <div class="contact__wrapper"></div> -->
 	</section>
 </template>
 
@@ -65,9 +57,6 @@
 		font-size: 1.75rem;
 		@include mobile {
 			flex-direction: column;
-		}
-		.contact__wrapper {
-			// width: 100%;
 		}
 		.contact__details {
 			display: flex;
@@ -95,7 +84,6 @@
 			width: 65vw;
 			@include mobile {
 				width: 100vw;
-				// height: auto;
 			}
 		}
 		img {
