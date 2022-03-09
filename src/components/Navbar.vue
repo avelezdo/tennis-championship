@@ -59,7 +59,6 @@
 		background: transparent;
 		color: $white;
 		padding: 1rem;
-		box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
 		margin-top: 10px;
 		position: relative;
 		@include nav-collapse {
@@ -86,7 +85,6 @@
 			@include flex(row, space-between, center);
 			@include nav-collapse {
 				background: #1b1b20;
-				margin-top: 50px;
 				position: fixed;
 				right: 0;
 				top: 0;
