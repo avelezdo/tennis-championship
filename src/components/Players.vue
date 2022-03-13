@@ -13,17 +13,36 @@
 	import mediumDani from '../assets/images/players/dani-rincon_460.jpg';
 	import bigDani from '../assets/images/players/dani-rincon.jpg';
 
+	import { computed } from 'vue';
 	const sizes = '(max-width: 300px) 260px, (max-width: 460px) 420px, 640px';
-	const imageSizes = (playerName) => {
-		const small = eval(`small${playerName}`);
-		const medium = eval(`medium${playerName}`);
-		const big = eval(`big${playerName}`);
+	const GuillermoImageSizes = computed(() => {
 		return `
-	    ${small} 300w,
-	    ${medium} 460w,
-	    ${big} 640w
+	    ${smallGuillermo} 300w,
+	    ${mediumGuillermo} 460w,
+	    ${bigGuillermo} 640w
 	    `;
-	};
+	});
+	const RubenImageSizes = computed(() => {
+		return `
+	    ${smallRuben} 300w,
+	    ${mediumRuben} 460w,
+	    ${bigRuben} 640w
+	    `;
+	});
+	const TommyImageSizes = computed(() => {
+		return `
+	    ${smallTommy} 300w,
+	    ${mediumTommy} 460w,
+	    ${bigTommy} 640w
+	    `;
+	});
+	const DaniImageSizes = computed(() => {
+		return `
+	    ${smallDani} 300w,
+	    ${mediumDani} 460w,
+	    ${bigDani} 640w
+	    `;
+	});
 </script>
 
 <template>
@@ -31,16 +50,16 @@
 		<h1 class="players__title">Jugadores</h1>
 		<div class="players__grid">
 			<div class="player-1 players__wrapper">
-				<v-lazy-image :srcset="imageSizes('Guillermo')" :sizes="sizes" :src="bigGuillermo" alt="Guillermo García-López" />
+				<v-lazy-image :srcset="GuillermoImageSizes" :sizes="sizes" :src="bigGuillermo" alt="Guillermo García-López" />
 			</div>
 			<div class="player-2 players__wrapper">
-				<v-lazy-image :srcset="imageSizes('Ruben')" :sizes="sizes" :src="bigRuben" alt="Rubén Ramírez Hidalgo" />
+				<v-lazy-image :srcset="RubenImageSizes" :sizes="sizes" :src="bigRuben" alt="Rubén Ramírez Hidalgo" />
 			</div>
 			<div class="player-3 players__wrapper">
-				<v-lazy-image :srcset="imageSizes('Tommy')" :sizes="sizes" :src="bigTommy" alt="Tommy Robredo" />
+				<v-lazy-image :srcset="TommyImageSizes" :sizes="sizes" :src="bigTommy" alt="Tommy Robredo" />
 			</div>
 			<div class="player-4 players__wrapper">
-				<v-lazy-image :srcset="imageSizes('Dani')" :sizes="sizes" :src="bigDani" alt="Dani Rincón" />
+				<v-lazy-image :srcset="DaniImageSizes" :sizes="sizes" :src="bigDani" alt="Dani Rincón" />
 			</div>
 		</div>
 	</section>
