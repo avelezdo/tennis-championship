@@ -1,5 +1,23 @@
 <script setup>
 	import VLazyImage from 'v-lazy-image';
+	import map400 from '../assets/images/map_400.jpg';
+	import map640 from '../assets/images/map_640.jpg';
+	import map860 from '../assets/images/map_860.jpg';
+	import map1024 from '../assets/images/map_1024.jpg';
+	import map1240 from '../assets/images/map_1240.jpg';
+	import mapOriginal from '../assets/images/map.jpg';
+	import { computed } from 'vue';
+
+	const imageSizes = computed(() => {
+		return `
+	    ${map400} 400w,
+	    ${map640} 640w,
+	    ${map860} 860w,
+	    ${map1024} 1024w,
+	    ${map1240} 1240w,
+	    ${mapOriginal} 1840w,
+	    `;
+	});
 </script>
 
 <template>
@@ -39,13 +57,9 @@
 		</div>
 		<div class="contact__map">
 			<v-lazy-image
-				srcset="
-            /src/assets/images/map.jpg 2200w,
-            /src/assets/images/map.jpg 1000w,
-            /src/assets/images/map.jpg 800w
-          "
-				sizes="100%, 100%, 100%"
-				src="/src/assets/images/map.jpg"
+				:srcset="imageSizes"
+				sizes="(max-width: 400px) 400px, (max-width: 640px) 640px, (max-width: 860px) 860px, (max-width: 1024px) 1024px, (max-width: 1240px) 1240px, (max-width: 1840px) 1840px"
+				:src="mapOriginal"
 			/>
 		</div>
 	</section>
