@@ -49,18 +49,22 @@
 	<section class="players">
 		<h1 class="players__title">Jugadores</h1>
 		<div class="players__grid">
-			<div class="player-1 players__wrapper">
+			<figure>
 				<v-lazy-image :srcset="GuillermoImageSizes" :sizes="sizes" :src="bigGuillermo" alt="Guillermo García-López" />
-			</div>
-			<div class="player-2 players__wrapper">
+				<figcaption>Guillermo García López</figcaption>
+			</figure>
+			<figure>
 				<v-lazy-image :srcset="RubenImageSizes" :sizes="sizes" :src="bigRuben" alt="Rubén Ramírez Hidalgo" />
-			</div>
-			<div class="player-3 players__wrapper">
+				<figcaption>Rubén Ramírez Hidalgo</figcaption>
+			</figure>
+			<figure>
 				<v-lazy-image :srcset="TommyImageSizes" :sizes="sizes" :src="bigTommy" alt="Tommy Robredo" />
-			</div>
-			<div class="player-4 players__wrapper">
+				<figcaption>Tommy Robredo</figcaption>
+			</figure>
+			<figure>
 				<v-lazy-image :srcset="DaniImageSizes" :sizes="sizes" :src="bigDani" alt="Dani Rincón" />
-			</div>
+				<figcaption>Dani Rincón</figcaption>
+			</figure>
 		</div>
 	</section>
 </template>
@@ -76,7 +80,13 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			grid-column-gap: 4vw;
-			grid-row-gap: 1rem;
+			grid-row-gap: 4rem;
+			figcaption {
+				text-align: center;
+			}
+			@include tablet {
+				grid-row-gap: 2rem;
+			}
 		}
 		.players__title {
 			font-family: 'LeagueGothic';
