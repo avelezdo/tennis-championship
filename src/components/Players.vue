@@ -1,5 +1,29 @@
 <script setup>
 	import VLazyImage from 'v-lazy-image';
+	import smallGuillermo from '../assets/images/players/Guillermo_Garcia-Lopez_300.jpg';
+	import mediumGuillermo from '../assets/images/players/Guillermo_Garcia-Lopez_460.jpg';
+	import bigGuillermo from '../assets/images/players/Guillermo_Garcia-Lopez.jpg';
+	import smallRuben from '../assets/images/players/ruben-ramirez-hidalgo_300.jpg';
+	import mediumRuben from '../assets/images/players/ruben-ramirez-hidalgo_460.jpg';
+	import bigRuben from '../assets/images/players/ruben-ramirez-hidalgo.jpg';
+	import smallTommy from '../assets/images/players/Tommy-Robredo_300.jpg';
+	import mediumTommy from '../assets/images/players/Tommy-Robredo_460.jpg';
+	import bigTommy from '../assets/images/players/Tommy-Robredo.jpg';
+	import smallDani from '../assets/images/players/dani-rincon_300.jpg';
+	import mediumDani from '../assets/images/players/dani-rincon_460.jpg';
+	import bigDani from '../assets/images/players/dani-rincon.jpg';
+
+	const sizes = '(max-width: 300px) 260px, (max-width: 460px) 420px, 640px';
+	const imageSizes = (playerName) => {
+		const small = eval(`small${playerName}`);
+		const medium = eval(`medium${playerName}`);
+		const big = eval(`big${playerName}`);
+		return `
+	    ${small} 300w,
+	    ${medium} 460w,
+	    ${big} 640w
+	    `;
+	};
 </script>
 
 <template>
@@ -7,48 +31,16 @@
 		<h1 class="players__title">Jugadores</h1>
 		<div class="players__grid">
 			<div class="player-1 players__wrapper">
-				<v-lazy-image
-					alt="Guillermo García-López"
-					srcset="
-        /src/assets/images/players/Guillermo_Garcia-Lopez.jpg 700w,
-        /src/assets/images/players/Guillermo_Garcia-Lopez_460.jpg 500w
-      "
-					sizes="100%, 100%, 100%"
-					src="/src/assets/images/players/Guillermo_Garcia-Lopez_300.jpg"
-				/>
+				<v-lazy-image :srcset="imageSizes('Guillermo')" :sizes="sizes" :src="bigGuillermo" alt="Guillermo García-López" />
 			</div>
 			<div class="player-2 players__wrapper">
-				<v-lazy-image
-					alt="Rubén Ramírez Hidalgo"
-					srcset="
-        /src/assets/images/players/ruben-ramirez-hidalgo.jpg 700w,
-        /src/assets/images/players/ruben-ramirez-hidalgo_460.jpg 500w,
-      "
-					sizes="100%, 100%, 100%"
-					src="/src/assets/images/players/ruben-ramirez-hidalgo_300.jpg"
-				/>
+				<v-lazy-image :srcset="imageSizes('Ruben')" :sizes="sizes" :src="bigRuben" alt="Rubén Ramírez Hidalgo" />
 			</div>
 			<div class="player-3 players__wrapper">
-				<v-lazy-image
-					alt="Tommy Robredo"
-					srcset="
-        /src/assets/images/players/Tommy-Robredo.jpg 700w,
-        /src/assets/images/players/Tommy-Robredo_460.jpg 500w,
-      "
-					sizes="100%, 100%, 100%"
-					src="/src/assets/images/players/Tommy-Robredo_300.jpg"
-				/>
+				<v-lazy-image :srcset="imageSizes('Tommy')" :sizes="sizes" :src="bigTommy" alt="Tommy Robredo" />
 			</div>
 			<div class="player-4 players__wrapper">
-				<v-lazy-image
-					alt="Dani Rincón"
-					srcset="
-        /src/assets/images/players/dani-rincon.jpg 700w,
-        /src/assets/images/players/dani-rincon_460.jpg 500w,
-      "
-					sizes="100%, 100%, 100%"
-					src="/src/assets/images/players/dani-rincon_300.jpg"
-				/>
+				<v-lazy-image :srcset="imageSizes('Dani')" :sizes="sizes" :src="bigDani" alt="Dani Rincón" />
 			</div>
 		</div>
 	</section>
