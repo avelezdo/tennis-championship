@@ -1,5 +1,13 @@
 <script setup>
 	import VLazyImage from 'v-lazy-image';
+	import smallCasino from '../assets/images/sponsors/casino-Tomares-400.jpg';
+	import mediumCasino from '../assets/images/sponsors/casino-Tomares-600.jpg';
+	import bigCasino from '../assets/images/sponsors/casino-Tomares-1200.jpg';
+	import smallCouncil from '../assets/images/sponsors/ayuntamiento-Tomares.jpg';
+	import { computed } from 'vue';
+	const casinoImageSizes = computed(() => {
+		return `${smallCasino} 400w, ${mediumCasino} 600w, ${bigCasino} 1200w`;
+	});
 </script>
 
 <template>
@@ -8,27 +16,13 @@
 		<div class="parent">
 			<div class="div1">
 				<v-lazy-image
-					class="picture-demo"
-					srcset="
-        /src/assets/images/sponsors/casino-Tomares-1200.jpg 2200w,
-        /src/assets/images/sponsors/casino-Tomares-600.jpg 1000w,
-        /src/assets/images/sponsors/casino-Tomares-400.jpg 800w
-      "
-					sizes="100%, 100%, 100%"
-					src="/src/assets/images/sponsors/casino-Tomares-400.jpg"
+					:srcset="casinoImageSizes"
+					sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 1200px) 1200px"
+					:src="bigCasino"
 				/>
 			</div>
 			<div class="div2">
-				<v-lazy-image
-					class="picture-demo"
-					srcset="
-        /src/assets/images/sponsors/ayuntamiento-Tomares.jpg 1200w,
-        /src/assets/images/sponsors/ayuntamiento-Tomares.jpg 600w,
-        /src/assets/images/sponsors/ayuntamiento-Tomares.jpg 400w
-      "
-					sizes="100%, 100%, 100%"
-					src="/src/assets/images/sponsors/ayuntamiento-Tomares.jpg"
-				/>
+				<v-lazy-image :src="smallCouncil" />
 			</div>
 		</div>
 	</section>
